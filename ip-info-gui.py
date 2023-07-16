@@ -10,6 +10,7 @@ data = json.loads(response.text)
 
 ip = data['ip']
 city = data['city']
+provider = data['provider']
 region = data['region']
 country = data['country']
 postal = data['postal']
@@ -48,24 +49,28 @@ label4=gui.Label(form,text="IP Address: "+ip)
 label4.configure(font=("Terminal", 12, "normal"))
 label4.pack()
 
-label5=gui.Label(form,text="City: "+city)
-label5.configure(font=("Verdana", 11, "normal"))
+label5=gui.Label(form,text="Provider: " + provider)
+label5.configure(font=("Verdana", 11, "noraml"))
 label5.pack()
 
-label6=gui.Label(form,text="Region: "+region)
+label6=gui.Label(form,text="City: "+city)
 label6.configure(font=("Verdana", 11, "normal"))
 label6.pack()
 
-label7=gui.Label(form,text="Country: "+country)
+label7=gui.Label(form,text="Region: "+region)
 label7.configure(font=("Verdana", 11, "normal"))
 label7.pack()
 
-label8=gui.Label(form,text="Postal: "+postal)
+label8=gui.Label(form,text="Country: "+country)
 label8.configure(font=("Verdana", 11, "normal"))
 label8.pack()
 
-label9=gui.Label(form,text="Time Zone: "+timezone)
+label9=gui.Label(form,text="Postal: "+postal)
 label9.configure(font=("Verdana", 11, "normal"))
 label9.pack()
+
+label10=gui.Label(form,text="Time Zone: "+timezone)
+label10.configure(font=("Verdana", 11, "normal"))
+label10.pack()
 
 form.mainloop()
